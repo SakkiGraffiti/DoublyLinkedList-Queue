@@ -53,7 +53,7 @@ public class RepairQueue {
 			}
 			else {
 				nextItem.setPrev(tail);
-				nextItem.setNext(nextItem);
+				tail.setNext(nextItem);
 				tail = nextItem;
 			}
 			return true;
@@ -66,11 +66,11 @@ public class RepairQueue {
 	//Dequeue deletes to front of the list
 	
 	public Computer dequeue() {
+		Computer temp= head.getData();
 		if(isEmpty() ) {
 			System.out.println("List is empty");
 		}
 		else {
-			Computer temp= new Computer();
 			DoublyLinkedListNode temp2 = head;
 			if(head == tail) {
 				head = null;
@@ -80,12 +80,11 @@ public class RepairQueue {
 			{
 			head = head.getNext();
 			head.setPrev(null);
-			}
 			temp2 = null;
-			return temp;
+			}
 		}
-		return null;
-	
+			return temp;
+
 }
 	
 	

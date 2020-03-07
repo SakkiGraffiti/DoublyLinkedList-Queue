@@ -8,8 +8,8 @@ public class DoublyLinkedListNode {
 	
 	
 	public DoublyLinkedListNode() {
-		super();
-		// TODO Auto-generated constructor stub
+		next = null;
+		prev = null;
 	}
 
 
